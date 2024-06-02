@@ -3,7 +3,7 @@ services:
   - type: web
     name: Chainlit-OpenAI-Assistant
     runtime: python
-    repo: https://github.com/Chainlit/openai-assistant
+    repo: https://github.com/uyunho99/openai-assistant
     plan: starter
     envVars:
       - key: OPENAI_API_KEY
