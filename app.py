@@ -91,6 +91,31 @@ class EventHandler(AsyncAssistantEventHandler):
         self.current_message.elements.append(image_element)
         await self.current_message.update()
 
+@cl.set_starters
+async def set_starters():
+    return [
+        cl.Starter(
+            label="신입생 영어 기초학력 평가",
+            message="한양대학교 신입생 영어 기초학력 평가에 대해서 자세히 알려줘",
+            icon="/public/idea.svg",
+            ),
+
+        cl.Starter(
+            label="성적",
+            message="한양대학교 성적처리와 성적 등급 비율에 대해서 알려줘.",
+            icon="/public/document.svg",
+            ),
+        cl.Starter(
+            label="기숙사",
+            message="한양대학교 기숙사에 대해서 알려줘.",
+            icon="/public/center.svg",
+            ),
+        cl.Starter(
+            label="수강신청",
+            message="한양대학교 2024학년도 1학기 수강신청 일정에 대해서 알려줘.",
+            icon="/public/calendar.svg",
+            )
+        ]
 
 @cl.step(type="tool")
 async def speech_to_text(audio_file):
