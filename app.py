@@ -11,7 +11,6 @@ import chainlit as cl
 from chainlit.config import config
 from chainlit.element import Element
 
-
 async_openai_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 sync_openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -151,16 +150,15 @@ async def process_files(files: List[Element]):
     ]
 
 
-@cl.on_chat_start
-async def start_chat():
-    # Create a Thread
-    thread = await async_openai_client.beta.threads.create()
-    # Store thread ID in user session for later use
-    cl.user_session.set("thread_id", thread.id)
-    # await cl.Avatar(name=assistant.name, path="./public/HYLION_1.png").send()
-    await cl.Message(content="안녕하세요! 한양대학교 챗봇입니다. 무엇을 도와드릴까요?", disable_feedback=True).send()
+# @cl.on_chat_start
+# async def start_chat():
+#     # Create a Thread
+#     thread = await async_openai_client.beta.threads.create()
+#     # Store thread ID in user session for later use
+#     cl.user_session.set("thread_id", thread.id)
+#     await cl.Avatar(name=assistant.name, path="./public/HYLION_1.png").send()
+#     await cl.Message(content="안녕하세요! 한양대학교 챗봇입니다. 무엇을 도와드릴까요?", disable_feedback=True).send()
     
-
 @cl.on_message
 async def main(message: cl.Message):
     thread_id = cl.user_session.get("thread_id")
