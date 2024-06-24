@@ -1,9 +1,9 @@
 # Exported from Render on 2024-05-20T20:56:35Z
 services:
   - type: web
-    name: Chainlit-OpenAI-Assistant
+    name: HYU_Chatbot_D
     runtime: python
-    repo: https://github.com/uyunho99/openai-assistant
+    repo: https://github.com/uyunho99/HYU_Chatbot_D
     plan: starter
     envVars:
       - key: OPENAI_API_KEY

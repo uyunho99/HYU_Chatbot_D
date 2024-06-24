@@ -132,7 +132,7 @@ async def start_chat():
     thread = await async_openai_client.beta.threads.create()
     # Store thread ID in user session for later use
     cl.user_session.set("thread_id", thread.id)
-    await cl.Avatar(name=assistant.name, path="./public/HYLION_1.png").send()
+    # await cl.Avatar(name=assistant.name, path="./public/HYLION_1.png").send()
     await cl.Message(content="안녕하세요! 한양대학교 챗봇입니다. 무엇을 도와드릴까요?", disable_feedback=True).send()
     
 
