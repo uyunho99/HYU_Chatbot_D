@@ -133,17 +133,17 @@ async def set_starters():
             ),
 
         cl.Starter(
-            label="성적",
+            label="성적처리",
             message="한양대학교 성적처리와 성적 등급 비율에 대해서 알려줘.",
             icon="/public/report_card_big.png",
             ),
         cl.Starter(
-            label="기숙사",
+            label="기숙사 신청 일정",
             message="한양대학교 기숙사에 대해서 알려줘.",
             icon="/public/center_big.png",
             ),
         cl.Starter(
-            label="수강신청",
+            label="수강신청 일정",
             message="한양대학교 2024학년도 1학기 수강신청 일정에 대해서 알려줘.",
             icon="/public/calendar_big.png",
             )
@@ -196,7 +196,7 @@ async def on_audio_chunk(chunk: cl.AudioChunk):
 
 
 @cl.on_audio_end
-async def on_audio_end(elements: list[Element]):
+async def on_audio_end(elements: List[Element]):
     # Get the audio buffer from the session
     audio_buffer: BytesIO = cl.user_session.get("audio_buffer")
     audio_buffer.seek(0)  # Move the file pointer to the beginning
