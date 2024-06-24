@@ -94,25 +94,25 @@ class EventHandler(AsyncAssistantEventHandler):
 async def set_starters():
     return [
         cl.Starter(
-            label="신입생 영어 기초학력 평가",
+            label="신입생 영어기초학력평가",
             message="한양대학교 신입생 영어 기초학력 평가에 대해서 자세히 알려줘",
-            icon="/public/idea.svg",
+            icon="/public/idea_big.png",
             ),
 
         cl.Starter(
             label="성적",
             message="한양대학교 성적처리와 성적 등급 비율에 대해서 알려줘.",
-            icon="/public/document.svg",
+            icon="/public/report_card_big.png",
             ),
         cl.Starter(
             label="기숙사",
             message="한양대학교 기숙사에 대해서 알려줘.",
-            icon="/public/center.svg",
+            icon="/public/center_big.png",
             ),
         cl.Starter(
             label="수강신청",
             message="한양대학교 2024학년도 1학기 수강신청 일정에 대해서 알려줘.",
-            icon="/public/calendar.svg",
+            icon="/public/calendar_big.png",
             )
         ]
 
