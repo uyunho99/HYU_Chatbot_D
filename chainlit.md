@@ -1,14 +1,7 @@
-# Welcome to Chainlit! 🚀🤖
+안녕하세요? 한양대학교 챗봇 관리자입니다.
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+챗봇 관리를 위해 다음 링크를 통해 설문을 응해주시면 감사하겠습니다.
 
-## Useful Links 🔗
+[설문 링크]()
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
-
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
-
-## Welcome screen
-
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.
+설문에 참여해주신 분 중 추첨을 통해 10분께 스타벅스 커피 쿠폰을 보내드리겠습니다.

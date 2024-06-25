@@ -1,7 +1,7 @@
 import os
 from io import BytesIO
 from pathlib import Path
-from typing import List
+from typing import List, Dict, Optional
 
 from openai import AsyncAssistantEventHandler, AsyncOpenAI, OpenAI
 
@@ -219,3 +219,16 @@ async def on_audio_end(elements: List[Element]):
     msg = cl.Message(author="You", content=transcription, elements=elements)
 
     await main(message=msg)
+
+
+@cl.oauth_callback
+def oauth_callback(
+    provider_id: str,
+    token: str,
+    raw_user_data: Dict[str, str],
+    default_user: cl.User,
+    ) -> Optional[cl.User]:
+    if provider_id == "google":
+        if raw_user_data["hd"] == "hanyang.ac.kr":
+            return default_user
+    return None
